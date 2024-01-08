@@ -11,17 +11,20 @@ t = Turtle()
 t.penup()
 t.speed(20)
 t.setposition(-200, -200)
-dots_number = 101
-for count in range(1, dots_number):
-    t.dot(10, random.choice(list_of_colors))
+t.hideturtle()
+# Total number of dots
+dots_number = 100
+for count in range(1, dots_number+ 1):
+    t.dot(15, random.choice(list_of_colors))
     t.penup()
-    t.forward(30)
+    t.forward(50)
 
+    # Number of dots in a row
     if count % 10 == 0:
         t.left(90)
         t.forward(50)
         t.left(90)
-        t.forward(300)
+        t.forward(500)
         t.right(180)
 
 # Show Screen
